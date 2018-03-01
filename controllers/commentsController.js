@@ -19,20 +19,14 @@ module.exports = {
   },
 
 
-  update (req, res){
+  update (req, res, next){
     commentsDB.update(req.body)
+    console.log('result --->', req.body)
     .then(result => {
-      res.json({
-        message: 'ok',
-        data: result
-      })
+      res.locals.comment = result
+      next()
     })
-    .catch(err => {
-      res.status(500).json({
-        message: 'error',
-        error: err
-      })
-    })
+    .catch(err => next(err))
   },
 
   delete (req, res) {

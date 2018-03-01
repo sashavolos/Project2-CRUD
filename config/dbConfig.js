@@ -1,5 +1,5 @@
 module.exports = {
   host: 'localhost',
   port: '5432',
-  database: 'project2'
+  database: 'mydb'
 }
