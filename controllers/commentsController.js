@@ -1,7 +1,8 @@
 const commentsDB = require('../models/commentsDB')
 
-
+module.exports = {
   create (req, res) {
+    console.log(req.body)
     commentsDB.save(req.body)
     .then(result => {
       res.json({
@@ -18,7 +19,7 @@ const commentsDB = require('../models/commentsDB')
   },
 
 
-  update (req, res) {
+  update (req, res){
     commentsDB.update(req.body)
     .then(result => {
       res.json({

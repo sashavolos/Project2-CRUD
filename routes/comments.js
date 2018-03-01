@@ -3,11 +3,20 @@ const commentsRouter = express.Router()
 const commentsController = require('../controllers/commentsController')
 // const viewsController = require('../controllers/viewsController')
 
+// commentsRouter.get('/', (req, res) => {
+//   res.send('Hi again')
+// })
 
-commentsRouter.post('/comments/:id', commentsController.create)
+commentsRouter.get('/', (req, res) => {
+  res.render('../comments/createComment')
+})
+commentsRouter.get('/', (req, res) => {
+  res.render('../comments/updateComment')
+})
+commentsRouter.post('/', commentsController.create)
 
-commentsRouter.put('/comments/:id', commentsController.update)
+commentsRouter.put('/', commentsController.update)
 
-commentsRouter.delete('/:id', commentsController.delete)
+commentsRouter.delete('/', commentsController.delete)
 
 module.exports = commentsRouter

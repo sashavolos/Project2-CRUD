@@ -4,14 +4,15 @@ const dbConfig = require('../config/dbConfig')
 const db = pgp(dbConfig)
 
 module.exports = {
-  create (id) {
+  save (comment) {
+    console.log('hey create comment now', comment)
     return db.one('INSERT INTO comments \
    (name, comment) VALUES \
    ($[name], $[comment]) \
    RETURNING *', comment)
   },
 
-  update (id) {
+  update (comment) {
     return db.one('UPDATE comments \
     SET name=$[name], comment=$[comment] \
     WHERE id=$[id] \

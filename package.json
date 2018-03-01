@@ -1,0 +1,30 @@
+{
+  "name": "project2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sashavolos/Project2-CRUD.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sashavolos/Project2-CRUD/issues"
+  },
+  "homepage": "https://github.com/sashavolos/Project2-CRUD#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "logger": "0.0.1",
+    "method-override": "^2.3.10",
+    "morgan": "^1.9.0",
+    "pg-promise": "^8.1.0",
+    "sql": "^0.78.0"
+  }
+}
