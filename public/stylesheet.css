@@ -15,24 +15,29 @@ margin-left: 172px;
 display: inline;
 background-color:#C0C0C0;
 }
-header {
-  background-color:#C0C0C0;
-}
 
 
 textarea#style {
   height: 50px;
   width: 190px;
-  margin-top: 220px;
+  margin-top: 200px;
   border: solid red 4px;
-  position: relative;
+  /* position: relative; */
   text-align: center;
 
 }
 textarea#style2 {
   border: solid red 4px;
-  position: relative;
+  /* position: relative; */
+    margin-top: 200px;
 
+}
+
+#ff {
+  font-family: 'Clicker Script', cursive;
+  font-size: 70px;
+  margin-bottom: -140px;
+  padding-top: 50px;
 }
 
 label {
@@ -221,4 +226,12 @@ body{
     20% { opacity: 1; height: 1.2em; }
 	  28% { opacity: 0; height:2em;}
     100% { opacity: 0; }
+}
+
+
+#name {
+  background-color: red;
+}
+#comment {
+
 }

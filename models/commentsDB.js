@@ -22,5 +22,22 @@ module.exports = {
 
   delete (id) {
     return db.none('DELETE FROM comments WHERE id=$1', id)
+  },
+  findAll () {
+    return db.many('SELECT * FROM comments')
+  },
+
+  findById (id) {
+    return db.one('SELECT * FROM comments WHERE id=$1', id)
   }
 }
+module.exports.delete ({
+  id: 2,
+  name: 'john',
+  comment: 'hello world!!'
+}).then(comments => {
+  console.log(comments)
+})
+.catch(err => {
+  console.log(err.message)
+})

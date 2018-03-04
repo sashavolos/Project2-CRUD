@@ -1,0 +1,17 @@
+<% include ./partials/boilerplate.ejs %>
+<% if (data) { %>
+<% for (let oneComment of data) { %>
+  <div id='name'>
+  <p><%=oneComment.name%></p>
+</div>
+<div id='comment'>
+  <p><%=oneComment.comment%></p>
+</div>
+  <form action="/comments/<%= oneComment.id%>?_method=Delete" method="post">
+    <input type='submit' value='delete comment'/>
+  </form>
+  <form action="/comments/<%= oneComment.id%>?_method=Post" method="post">
+    <input type='submit' value='update comment'/>
+  </form>
+<% } %>
+  <%}%>
