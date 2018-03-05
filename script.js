@@ -6,7 +6,7 @@ const methodOverride = require('method-override')
 
 const commentsRouter = require('./routes/comments')
 
-const PORT = process.env.PORT || 3002
+const PORT = process.env.PORT || 3005
 
 // create an app
 const app = express()

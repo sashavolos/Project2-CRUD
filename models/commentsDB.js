@@ -7,9 +7,9 @@ module.exports = {
   save (comment) {
     console.log('hey create comment now', comment)
     return db.one('INSERT INTO comments \
-   (name, comment) VALUES \
-   ($[name], $[comment]) \
-   RETURNING *', comment)
+      (name, comment) VALUES \
+      ($[name], $[comment]) \
+      RETURNING *', comment)
   },
 
   update (comment) {

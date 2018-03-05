@@ -1,6 +1,19 @@
 <% include ../partials/boilerplate.ejs %>
-<h1>Update</h1>
 
+<header>
+<link href="https://fonts.googleapis.com/css?family=Clicker+Script" rel="stylesheet">
+</header>
+<link href="./stylesheet.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
 <form action="/comments" method="post">
-  <button type="submit">Update</button>
+  <h1 id='ff'>Feedback Forum</h1>
+  <label>Name:
+    <textarea id='style2'name="name" value=""></textarea>
+  </label>
+  <label>Comment:
+    <textarea id='style' name="comment" value=""></textarea>
+  </label>
+  <!-- <form action="/comments" method="post">
+    <button type="submit">Update</button>
+  </form> -->
 </form>

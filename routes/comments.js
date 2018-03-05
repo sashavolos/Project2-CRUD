@@ -14,9 +14,7 @@ commentsRouter.post('/', commentsController.create, commentsController.getAll, v
 
 commentsRouter.put('/', commentsController.update, commentsController.getAll, viewsController.showComments)
 
-commentsRouter.post('/', commentsController.create)
-
-commentsRouter.put('/', commentsController.update, viewsController.showComments)
+// commentsRouter.put('/', commentsController.update, viewsController.showComments)
 
 commentsRouter.delete('/:id', commentsController.delete, commentsController.getAll, viewsController.showComments)
 

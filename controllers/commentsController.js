@@ -2,7 +2,7 @@ const commentsDB = require('../models/commentsDB')
 
 module.exports = {
   create (req, res, next) {
-    console.log(req.body)
+    console.log('yo')
     commentsDB.save(req.body)
     .then(result => {
       res.locals.comment = result
@@ -22,19 +22,19 @@ module.exports = {
     })
   },
 
-getAll (req, res, next) {
-  commentsDB.findAll()
-  .then(result => {
-    console.log('IT WORKED IN ALL', result)
-    res.locals.comments = result
-    next()
-  })
-  .catch(err => {
-    console.log(err)
-    next()
-  })
-},
-
+  getAll (req, res, next) {
+    commentsDB.findAll()
+    .then(result => {
+      console.log('IT WORKED IN ALL', result)
+      res.locals.comments = result
+      next()
+    })
+    .catch(err => {
+      console.log(err)
+      next()
+    })
+  },
+  
   update (req, res, next){
     commentsDB.update(req.body)
         .then(result => {
