@@ -24,6 +24,7 @@
     "logger": "0.0.1",
     "method-override": "^2.3.10",
     "morgan": "^1.9.0",
+    "path": "^0.12.7",
     "pg-promise": "^8.1.0",
     "sql": "^0.78.0"
   }

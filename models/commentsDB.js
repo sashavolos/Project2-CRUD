@@ -12,7 +12,12 @@ module.exports = {
       RETURNING *', comment)
   },
 
+  getInfo(id){
+    return db.one(`SELECT * FROM comments WHERE id=$1`, id)
+  },
+
   update (comment) {
+    console.log(comment)
     return db.one('UPDATE comments \
     SET name=$[name], comment=$[comment] \
     WHERE id=$[id] \

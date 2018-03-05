@@ -1,19 +1,20 @@
-<% include ../partials/boilerplate.ejs %>
+<% include ./partials/boilerplate.ejs %>
 
 <header>
 <link href="https://fonts.googleapis.com/css?family=Clicker+Script" rel="stylesheet">
 </header>
 <link href="./stylesheet.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
-<form action="/comments" method="post">
+<form action="/comments/<%=comment.id%>?_method=Put" method="post">
   <h1 id='ff'>Feedback Forum</h1>
+  <input name="id" value="<%=comment.id%>" type="hidden"></input>
   <label>Name:
     <textarea id='style2'name="name" value=""></textarea>
+    <%=data.name%>
   </label>
   <label>Comment:
+    <%=data.comment%>
     <textarea id='style' name="comment" value=""></textarea>
   </label>
-  <!-- <form action="/comments" method="post">
-    <button type="submit">Update</button>
-  </form> -->
+    <input type='submit' value='update comment'/>
 </form>

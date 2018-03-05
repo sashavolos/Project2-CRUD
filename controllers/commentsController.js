@@ -25,7 +25,7 @@ module.exports = {
   getAll (req, res, next) {
     commentsDB.findAll()
     .then(result => {
-      console.log('IT WORKED IN ALL', result)
+      console.log('4')
       res.locals.comments = result
       next()
     })
@@ -34,16 +34,31 @@ module.exports = {
       next()
     })
   },
-  
-  update (req, res, next){
+
+  getComment(req, res, next){
+    console.log(`1`)
+    commentsDB.getInfo(req.params.id)
+    .then(result => {
+      res.locals.comment = result;
+      console.log(`heres my result`, result)
+      next()
+    })
+    .catch(err => {
+      next(err);
+    })
+  },
+
+  update(req, res, next){
+    console.log(`3`)
     commentsDB.update(req.body)
         .then(result => {
-          console.log('result --->', result)
-          res.locals.comment = result
+          res.locals.comment = result;
+          console.log(result)
           next()
     })
-    .catch(err => next(err))
-    next()
+    .catch(err => {
+      next(err);
+    })
   },
 
   delete (req, res, next) {
