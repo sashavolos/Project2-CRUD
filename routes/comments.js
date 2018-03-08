@@ -6,10 +6,16 @@ const viewsController = require('../controllers/viewsController')
 //   res.send('Hi again')
 // })
 
-commentsRouter.get('/', viewsController.showForm)
+commentsRouter.get('/comments-add', viewsController.showForm)
+// commentsRouter.get('/maps', viewsController.showForm3)
 // commentsRouter.get('/', (req, res) => {
 //   res.render('updateComment')
 // })
+commentsRouter.get('/', commentsController.getAll, (req, res) => {
+    res.render('allComments', {
+      comments: res.locals.comments
+    })
+})
 commentsRouter.post('/', commentsController.create, commentsController.getAll, viewsController.showComments)
 
 commentsRouter.route('/:id')

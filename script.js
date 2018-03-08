@@ -88,23 +88,9 @@ app.get(`/themes`, (req, res) => {
   res.render(`themes`);
 })
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+app.get(`/maps`, (req, res) => {
+  res.render(`maps`);
+})
 
 app.use(methodOverride('_method'))
 app.get('/', (req, res) => {

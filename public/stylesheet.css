@@ -229,9 +229,10 @@ body{
 }
 
 
-#name {
-  background-color: white;
+#maps {
+  margin-top: 100px;
 }
-#comment {
 
+#maps2 {
+  margin top: 500px;
 }

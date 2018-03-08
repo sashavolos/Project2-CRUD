@@ -1,0 +1,16 @@
+<% include ./partials/boilerplate.ejs %>
+<% if (!comments){ %>
+      <h1> no more comments to display </h1>
+<%} else {%>
+<%comments.forEach(el => {%>
+    <%=el.name%><br></br>
+      <%=el.comment%><br></br>
+      <form action="/comments/<%= el.id%>?_method=Delete" method="post">
+        <input type='submit' value='delete comment'/>
+      </form>
+      <form action="/comments/<%=el.id%>" method="get">
+        <button type="submit">Update</button>
+      </form>
+<%})%>
+
+<%}%>
